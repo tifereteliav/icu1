@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+}
+
+/* Custom ECG heartbeat line animation */
+@keyframes pulseEcg {
+  0% {
+    opacity: 0.3;
+    transform: scaleX(0.98);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scaleX(0.98);
+  }
+}
+
+.ecg-glow {
+  filter: drop-shadow(0 0 8px rgba(0, 92, 230, 0.5));
+}
+
+.heart-glow {
+  filter: drop-shadow(0 0 10px rgba(220, 38, 38, 0.4));
+}
